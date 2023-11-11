@@ -1,6 +1,6 @@
 import AWS from "aws-sdk";
 import AWSXRay from "aws-xray-sdk";
-import createLogger from "../utils/logger.mjs";
+import createLogger from "../../utils/logger.mjs";
 
 const XAWS = AWSXRay.captureAWS(AWS);
 const logger = createLogger("TodoAccess");

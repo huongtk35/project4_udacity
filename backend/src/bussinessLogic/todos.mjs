@@ -1,12 +1,19 @@
 import { TodosAccess } from './todosAcess.mjs';
-import { AttachmentUtils } from './attachmentUtils.mjs';
+import { AttachmentUtils } from './fileStorage/attachmentUtils.mjs';
 import createLogger from '../utils/logger.mjs';
 import { v4 as uuidv4 } from 'uuid';
-
+/***
+ * TODO: Implement businessLogic
+*/
 const logger = createLogger('TodosAccess');
 const attachmentUtils = new AttachmentUtils();
 const todosAccess = new TodosAccess();
 
+/***
+ * Create Todo task
+ * @param item userId
+ * @returns todo task
+ */
 export async function createTodo(newItem, userId) {
   logger.info('create todos');
   const todoId = uuidv4();
